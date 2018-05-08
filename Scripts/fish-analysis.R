@@ -16,8 +16,9 @@ library(tidyverse)
 ggplot(fish_mod) +
   geom_point(aes(x = length, y = scalelength, color = lakeid))
 
-
 #what about something like this
+# Great idea!
+# histogram of scalelength in each length category, and saved images of graph to Figures/
 ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
   geom_histogram(bins = 80)
 ggsave("Figures/scale_hist_by_length.jpg")
