@@ -15,3 +15,8 @@ View(fish_mod)
 library(tidyverse)
 ggplot(fish_mod) +
   geom_point(aes(x = length, y = scalelength, color = lakeid))
+
+
+#what about something like this
+ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
+  geom_histogram()
