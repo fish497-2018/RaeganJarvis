@@ -8,3 +8,7 @@ fish_data_cat = fish_data %>%
 View(fish_data_cat)
 fish_mod <- filter(fish_data_cat, scalelength >= 1)
 View(fish_mod)
+
+library(tidyverse)
+ggplot(fish_mod) +
+  geom_point(aes(x = length, y = scalelength, color = lakeid))
